@@ -56,7 +56,7 @@ services:
     mysql:
         container_name: laravel_test_examples_mysql
         restart: always
-        image: mysql
+        image: mysql:5.7
         volumes_from:
             - data
             - logs
@@ -80,11 +80,11 @@ services:
             MYSQL_USER: homestead_test
             MYSQL_PASSWORD: secret
             MYSQL_ROOT_PASSWORD: root
-    redis:
-        container_name: laravel_test_examples_redis
-        restart: always
-        image: redis
-        expose:
-            - "6379"
-        volumes_from:
-            - data
+    # redis:
+    #     container_name: laravel_test_examples_redis
+    #     restart: always
+    #     image: redis
+    #     expose:
+    #         - "6379"
+    #     volumes_from:
+    #         - data
